@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title>Rock & Techno Festival</title>
+
+    <!-- Favicons -->
+    <link href="build/img/logos/logoFavicon.ico" rel="icon">            
+    <link href="build/img/logos/logoFavicon.ico" rel="apple-touch-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor contenedor-header">
+            <picture >
+                <source srcset="./build/img/logos/logoRecortado.avif" type="image/avif">
+                <source srcset="./build/img/logos/logoRecortado.webp" type="image/webp">
+                <img class="logo_ia" loading="lazy" width="200" height="300" src="./build/img/logos/logoRecortado.jpg" alt="">
+            </picture>
+            <nav class="navegacion-principal">
+                <a href="#lineup">Line up</a>
+                <a href="#galeria">Galería</a>
+                <a href="#tickets">Tickets</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay"> <!-- Aquí el efecto gradiente/overlay-->
+            <div class="contenedor contenido-video">
+                <h2>Rock & Techno
+                    Festival</h2>
+                <p>Julio 2024, Madrid, España</p>
+            </div>
+        </div>
+
+        <video id="videoJS" muted playsinline loop autoplay>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+
+    <section class="contenedor sobre-festival">
+        <div class="imagen">
+            <picture>
+                <source srcset="build/img/arctic_monkeys.avif" type="image/avif">
+                <source srcset="build/img/arctic_monkeys.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/arctic_monkeys.jpg" alt="Imagen vocalista festival"> <!-- fallback. width="200" height="300" => siempre se recomienda ver la imagen inmediatamente, y modificarlo en el CSS -->
+            </picture>
+        </div>
+        <div class="contenido-festival">
+            <h2>Rock & Techno Festival</h2>
+            <p class="fecha">Julio 2024, Madrid, España</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolor expedita nulla dignissimos repellendus corporis excepturi enim eum?
+                Tenetur rerum excepturi natus dicta ullam sit, fuga asperiores maxime distinctio rem doloremque?</p>
+        </div>
+    </section>
+
+    <section id="lineup" class="lineup">
+        <h3>Line up</h3>
+        <p class="dia">Viernes 26</p>
+        <div class="escenarios-contenedor contenedor extra"> <!-- escenarios-contenedor -->
+            <div class="escenario rock bg-amarillo"> <!-- escenario -->
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        17:00 | <span>Foo Fighters</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Queens of the Stone Age</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Muse</span>
+                    </li>
+                    <li>
+                        20:00 | <span>KoRn</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Metallica</span>
+                    </li>
+                    <li>
+                        24:00 | <span>Red Hot Chili Peppers</span>
+                    </li>
+                </ul>
+            </div> 
+
+            <div class="escenario edm bg-newpink"> 
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        17:00 | <span>Kölsch</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Solomun </span>
+                    </li>
+                    <li>
+                        19:00 | <span>The martinez brothers</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Adam Beyer</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Nina Kraviz</span>
+                    </li>
+                    <li>
+                        24:00 | <span>Amelie Lens</span>
+                    </li>
+                </ul>
+            </div> <!-- escenario -->
+        </div> <!-- escenarios-contenedor -->
+
+        <h3>Line up</h3>
+        <p class="dia">Sábado 27</p>
+        <div class="escenarios-contenedor contenedor"> <!-- escenarios-contenedor -->
+            <div class="escenario rock bg-amarillo"> <!-- escenario -->
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        17:00 | <span>Radiohead</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Papa Roach</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Limp Bizkit</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Kings of Leon</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Tame Impala</span>
+                    </li>
+                    <li>
+                        24:00 | <span>Arctic Monkeys</span>
+                    </li>
+                </ul>
+            </div> 
+
+            <div class="escenario edm bg-newpink">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        17:00 | <span>M.A.N.D.Y</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Ron flatter</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Maceo Plex</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Carl Cox</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Richie Hawtin</span>
+                    </li>
+                    <li>
+                        24:00 | <span>Paul Kalkbrenner</span>
+                    </li>
+                </ul>
+            </div> <!-- escenario -->
+        </div> <!-- escenarios-contenedor -->
+    </section>
+
+    <!-- Galería creada dinamicamente con JS -->
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galería</h3>
+        <ul class="galeria-imagenes"></ul>
+    </section>
+
+    <section id="tickets" class="boletos">
+        <h3>Tickets</h3>
+        <div class="contenedor contenedor-boletos">
+            <div class="basico pase">
+                <p class="pase-dia">Pase 1 Día</p>
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>1 consumición</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>35€</p>
+                </footer>
+            </div>
+            <div class="premiun pase">
+                <p class="pase-dia">Pase 2 Días</p>
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>2 consumiciones</li>
+                        <li>Camiseta del evento</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>60€</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p class="max">Rock & Techno Festival</p>
+        <p class="min">© Todos los derechos reservados</p>
+    </footer>
+
+    <script src="build/js/scripts.js"></script>
+</body>
+
+</html>

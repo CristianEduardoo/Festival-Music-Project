@@ -1,0 +1,10 @@
+# Archivos generados automáticamente
+.DS_Store
+.vscode/      
+
+# Archivos específicos
+/src
+
+# Node.js dependencies
+/node_modules
+package-lock.json
