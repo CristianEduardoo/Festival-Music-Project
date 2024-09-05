@@ -1,0 +1,6 @@
+@forward "variables"; // apuntamos a cada archivo en el _index.sccs
+@forward "mixins";
+@forward "normalize";
+@forward "globales";
+
+// El orden de lectura del forward, es importante

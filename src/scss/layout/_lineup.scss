@@ -1,0 +1,100 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup {
+    background-color: v.$rosa;
+    padding: 5rem 0;
+
+    h3, p {
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    h3{
+        margin-bottom: 2rem;
+    }
+
+    .dia {
+        text-transform: uppercase;
+        margin-bottom: 6rem;
+    }
+}
+
+.escenarios-contenedor {
+    @include m.tablet {
+        @include m.grid (2, 5rem);
+    }
+
+    p {
+        color: v.$negro;
+    }
+}
+
+.extra {
+    margin-bottom: 10rem;
+}
+
+.escenario {
+    padding-top: 2rem;
+    border-radius: 5rem;
+    transition: box-show 0.3s ease; // ease => significa que la transición será más suave
+    
+    &:hover{
+        box-shadow: 0 0.1rem 0.4rem v.$negro; // El transition
+    }
+    
+    .nombre-escenario {
+        &::after { // Seudoelementos para los iconos despues del parrafo
+            content: ' '; // vacio, se coloca una img
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            background-size: 15rem; // El tamaño de la imagen
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 2rem auto 0 auto;
+        }
+    }
+}
+
+.rock .nombre-escenario::after {
+    background-image: url(../img/icono_rock.png);
+}
+
+.edm .nombre-escenario::after {
+    background-image: url(../img/icono_edm.png);
+}
+
+.bg-amarillo {
+    background-color: v.$amarillo;
+    margin-bottom: 5rem;
+
+    li:nth-child(odd) { // Tomará las impares o las diferentes
+        background-color: darken(v.$amarillo, 10%); /* darken() => función de sass */
+    }
+
+    @include m.tablet{
+        margin-bottom: 0rem;
+    }
+}
+
+.bg-newpink {
+    background-color: v.$newpink;
+
+    li:nth-child(odd) {
+        background-color: darken(v.$newpink, 10%);
+    }
+}
+
+.calendario {
+    @include m.resetear-lista;
+
+    li {
+        padding: 2.5rem;
+        font-weight: 700;
+
+        span {
+            font-weight: 400;
+        }
+    }
+}

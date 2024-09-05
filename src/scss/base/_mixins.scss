@@ -1,0 +1,56 @@
+@use "variables" as v;
+
+// Cuando comiensa con @ => son directivas de SCSS
+
+@mixin phone {
+    @media(min-width: v.$phone) {
+        @content; // remplaza el contenido dinamicamente de nuestro @include
+    }
+}
+
+@mixin tablet {
+    @media(min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media(min-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+@mixin grid ($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin resetear-lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Esto es un ejemplo de mixing con contenido fijo!
+
+@mixin heading($color: blue, $border-radius: false){ //creamos un mixin que recibe 2 parametros por default
+    text-transform: uppercase;
+    color: $color;
+    @if($border-radius){
+        border-radius: 1rem;
+    }    
+} 
+
+
+Por el otro lado... simplemente 
+.prueba{  => la clase
+    @include m.heading;
+}    
+*/

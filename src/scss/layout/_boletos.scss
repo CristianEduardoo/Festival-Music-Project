@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boletos {
+    background-color: v.$verde;
+    padding: 5rem 0;
+
+    h3 {
+        text-align: center;
+        color: v.$blanco;
+        margin-bottom: 2rem
+    }
+
+    .contenedor-boletos {
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+        }
+    }
+}
+
+.pase {
+    .pase-dia {
+        text-align: center;
+        font-size: 2.8rem;
+        color: v.$blanco;
+    }
+
+    &-header { // En el css final, crea un selector .pase-header{}
+        background-color: v.$rosa;
+
+        p {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
+
+    &-body {
+        background-color: v.$blanco;
+
+        ul {
+            @include m.resetear-lista;
+
+            li {
+                padding: 1rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+    }
+
+    &-footer {
+        background-color: v.$morado;
+
+        p {
+            font-size: 2.4rem;
+        }
+    }
+
+    &-header,
+    &-footer {
+        padding: 0.5rem;
+
+        p {
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+}
+
+.basico {
+    margin-bottom: 7rem;
+
+    @include m.tablet {
+        margin-bottom: 0rem;
+    }
+}

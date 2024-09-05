@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.site-footer {
+    background-color: v.$verde;
+    padding: 4rem 0 1.5rem 0;
+
+    p {
+        margin: 0;
+        text-align: center;
+        color: v.$blanco;
+    }
+}
+
+.max {
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: v.$newpink;
+    }
+}
+
+
+.min {
+    font-size: 1.3rem;
+}

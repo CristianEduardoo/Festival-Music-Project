@@ -1,0 +1,67 @@
+@use 'variables' as v;
+
+html{
+    font-size: 62.5%;//nos habilita 1rem = 10px
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: v.$fuentePrincipal;
+    font-size: 1.6rem; // => 16px
+    &.fijar-body{ // Clase creada por JS de galeria => mostrarImagen
+        overflow: hidden; // Para evitar el scroll
+    }
+
+    &.body-scroll{ // Clase creada por JS de navegacionFija
+        padding-top: 8rem; // Mismos pixeles de la barra principal
+    }
+}
+
+p{
+    font-size: 2rem;
+    color: v.$negro;
+    line-height: 1.5; // Para que sea mas afradable al leer
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    margin: 0 0 5rem 0;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+img{
+    max-width: 100%;
+    width: 100%; // Para acomodar el width="200" height="300" en el HTML predeterminado
+    height: auto; // mismo
+    display: block;
+}
+
+li{
+    text-align: center;
+}
